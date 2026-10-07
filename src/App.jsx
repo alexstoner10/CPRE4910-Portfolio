@@ -115,19 +115,13 @@ function SeniorDesign() {
     <section className="content-panel section-pad">
       <div className="panel-heading">
         <h2>AI Arcade</h2>
-        <p className="page-lede">AI Arcade uses natural-language AI to help people create or modify retro games, validate their changes, and play them on a Raspberry Pi-powered arcade cabinet. The goal is a tested, safe, plug-and-play experience that makes game creation accessible without programming skills.</p>
       </div>
       <div className="sd-grid">
-        <Detail label="My role · Software Engineer and AI-integration Team" text="I develop, test, and integrate the AI component. My work focuses on user and game testing, creating skills and tools that improve the model's performance, and researching and implementing security-focused application design." />
-        <Detail label="Project goals" text="Build on the existing AI game-authoring prototype, improve its user experience based on testing, add practical safeguards and validation for AI-generated code, and integrate the workflow with a functional physical arcade cabinet." />
-        <Detail label="Expected deliverables" text="An improved and tested AI authoring experience; isolation and validation for generated code; a Raspberry Pi arcade cabinet; an integrated modify, deploy, and play workflow; user-testing results; and final technical documentation." />
-        <Detail label="Anticipated timeline" text="Fall: understand and evaluate the prototype, research users, establish baseline results, define requirements, compare designs, and build early software and cabinet prototypes for user testing. Spring: improve the authoring system, add execution safeguards, build and integrate the cabinet, run further user tests, and deliver the finished system." />
-        <Detail label="Team and client" text="I work on a collaborative team spanning AI integration and the physical arcade. The project client is SilverTree Studios; Josh Clausman is the project contact. The team anticipates meeting with the client every two weeks, preferably in person." />
-        <Detail label="Client-provided resources" text="Hardware, software hosting, expertise in real-world AI applications, and a physical arcade cabinet." />
-      </div>
-      <div className="resource-row">
-        <span>Big-picture contribution</span>
-        <span>Lowering technical barriers so players can turn creative ideas into playable games.</span>
+        <Detail label="Description of project" text="AI Arcade builds on a working prototype that lets people describe retro-game changes in natural language. AI modifies game files and validates them, so users can quickly play their ideas on a Raspberry Pi arcade cabinet without needing programming skills. The team will improve the authoring experience through user testing and build a safe, integrated modify-and-play system. Fall work focuses on understanding the prototype, researching users, setting baseline results, and prototyping; spring focuses on safeguards, system integration, further testing, and delivery. The client is SilverTree Studios (contact: Josh Clausman), who provides hardware, hosting, AI expertise, and the cabinet. The team expects to meet in person every two weeks." />
+        <Detail label="Your role · Alex Stoner, Software Engineer and AI-integration Team" text="I develop, test, and integrate the AI component. I focus on user and game testing, creating skills and tools to improve the AI's performance, and researching and implementing security-focused application design." />
+        <Detail label="Skills or knowledge gained" text="I am learning how to evaluate an AI authoring experience through user and game testing, build skills and tools that help an AI agent perform reliably, integrate AI into an application, and design practical security controls for AI-generated code." />
+        <Detail label="Link supporting documents" text="Final technical documentation and user-testing results are expected project deliverables. Links can be added here when those materials are available." />
+        <Detail label="Big picture contribution" text="AI Arcade aims to remove technical barriers between a player's creative idea and a playable game, while addressing the security, validation, and responsible-use risks of user-created content." />
       </div>
     </section>
   </>;
