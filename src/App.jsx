@@ -15,6 +15,7 @@ const projects = [
     number: "01",
     title: "CyFitness",
     tag: "Project 01",
+    image: "/CPRE4910-Portfolio/documents/cyfitness.png",
     description: "CyFitness is an Android fitness platform designed to help users build healthy routines through workouts, exercise information, progress tracking, journaling, gym information, events, community posts, and an AI fitness assistant.",
     role: "I worked on the frontend Android application. My work included building user-facing screens and navigation, connecting the client to REST endpoints, displaying dynamic workout and community data, and supporting interactive features such as filtering workouts, managing posts, and viewing fitness information.",
     skills: "I gained experience designing multi-screen mobile interfaces, organizing Android activities and reusable adapters, consuming JSON APIs with Volley, handling asynchronous data and user interactions, and coordinating frontend work with a Spring Boot backend and a larger team.",
@@ -34,6 +35,7 @@ const projects = [
     number: "03",
     title: "Global Bites",
     tag: "Project 03",
+    image: "/CPRE4910-Portfolio/documents/global_bites.png",
     description: "Global Bites is a full-stack restaurant web application that combines food discovery with cultural context. Users can explore cuisines, view restaurant and dish information, read about cultural background, leave reviews, and move through menu, cart, checkout, and order-history experiences.",
     role: "I worked on the frontend and created the Menu, Explore, and Review pages. I established their page structures and navigation, built the interfaces that display cuisine and dish information, connected the pages to backend GET and POST requests, and contributed to the Confirmation page and supporting static pages.",
     skills: "I gained experience building React pages with reusable components, using React Router for navigation, loading and submitting data through APIs, designing review and rating interactions, organizing responsive page styling, and collaborating across frontend and backend responsibilities.",
@@ -98,7 +100,7 @@ function Home({ goTo }) {
       </div>
     </section>
     <section className="home-grid section-pad">
-      <div className="objective-block"><h2>Career objectives</h2><p>After graduation in May 2027, I will start a full-time position as an Information Security Engineer at Principal Financial Group. I hope to keep learning throughout my time there. One of my goals is to be able to move across the cybersecurity industry, which has many opportunities to learn, grow, and keep work interesting.</p><p>I believe there is value in having a lot of different experience that allows you to bring new and interesting perspectives into new roles. I hope to drive security changes and work toward making positive contributions to the risk posture of my future employers to provide security for customers and the company. Finally, I hope to promote security awareness and the importance of good cyber hygiene throughout the organization.</p></div>
+      <div className="objective-block"><h2>Career objectives</h2><p>After graduation in May 2027, I will start a full-time position as an Information Security Engineer at Principal Financial Group. I hope to keep learning throughout my time there. One of my goals is to be able to move across the cybersecurity industry from Identity and Access Management to GRC to Threat Intelligence. There are many opportunities to learn, grow, and keep work interesting within cybersecurity and I hop.</p><p>I believe there is value in having a lot of different experience that allows you to bring new and interesting perspectives into new roles. I hope to drive security changes and work toward making positive contributions to the risk posture of my future employers to provide security for customers and the company. Finally, I hope to promote security awareness and the importance of good cyber hygiene throughout the organization.</p></div>
     </section>
   </>;
 }
@@ -106,7 +108,7 @@ function Home({ goTo }) {
 function PageIntro({ number, eyebrow, title, children }) { return <section className="page-intro section-pad"><div className="section-label"><span>{number}</span><span>{eyebrow}</span></div><div><h1>{title}</h1>{children && <p className="page-lede">{children}</p>}</div></section>; }
 
 function Projects() {
-  return <><PageIntro title={<>Projects</>} ></PageIntro><section className="project-list section-pad">{projects.map((project) => <article className="project-card" key={project.number}><div className="project-heading"><div><span className="card-tag">{project.tag}</span><h2>{project.title}</h2></div></div><div className="project-details"><Detail label="Description" text={project.description} /><Detail label="My role" text={project.role} /><Detail label="Skills gained" text={project.skills} /><Detail label="Resources used" text={project.resources} />{project.demoLink && <div className="detail"><span>Demo</span><p><a className="resource-link" href={project.demoLink.url} target="_blank" rel="noreferrer">{project.demoLink.label}</a></p></div>}</div></article>)}</section></>;
+  return <><PageIntro title={<>Projects</>} ></PageIntro><section className="project-list section-pad">{projects.map((project) => <article className="project-card" key={project.number}><div className="project-heading"><div><span className="card-tag">{project.tag}</span><h2>{project.title}</h2>{project.image && <img className="project-image" src={project.image} alt={`${project.title} project`} />}</div></div><div className="project-details"><Detail label="Description" text={project.description} /><Detail label="My role" text={project.role} /><Detail label="Skills gained" text={project.skills} /><Detail label="Resources used" text={project.resources} />{project.demoLink && <div className="detail"><span>Demo</span><p><a className="resource-link" href={project.demoLink.url} target="_blank" rel="noreferrer">{project.demoLink.label}</a></p></div>}</div></article>)}</section></>;
 }
 
 function SeniorDesign() {
