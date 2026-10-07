@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 const navItems = [
   ["home", "Home"],
-  ["projects", "Projects"],
   ["senior-design", "Senior Design"],
+  ["projects", "Projects"],
   ["experience", "Experience"],
   ["reflections", "Reflections"],
   ["resume", "Resume"],
@@ -18,7 +18,7 @@ const projects = [
     description: "CyFitness is an Android fitness platform designed to help users build healthy routines through workouts, exercise information, progress tracking, journaling, gym information, events, community posts, and an AI fitness assistant.",
     role: "I worked on the frontend Android application. My work included building user-facing screens and navigation, connecting the client to REST endpoints, displaying dynamic workout and community data, and supporting interactive features such as filtering workouts, managing posts, and viewing fitness information.",
     skills: "I gained experience designing multi-screen mobile interfaces, organizing Android activities and reusable adapters, consuming JSON APIs with Volley, handling asynchronous data and user interactions, and coordinating frontend work with a Spring Boot backend and a larger team.",
-    resourceLink: { label: "CyFitness", url: "https://youtu.be/ACYdXcuholU?si=2mhqZiVHGDzHu3lZ" },
+    demoLink: { label: "Watch the CyFitness demo ↗", url: "https://youtu.be/ACYdXcuholU?si=2mhqZiVHGDzHu3lZ" },
     resources: "Android Studio, Java, XML, Android Activities, RecyclerView adapters, Volley, Spring Boot REST APIs, WebSocket notifications, Git",
   },
   {
@@ -106,7 +106,7 @@ function Home({ goTo }) {
 function PageIntro({ number, eyebrow, title, children }) { return <section className="page-intro section-pad"><div className="section-label"><span>{number}</span><span>{eyebrow}</span></div><div><h1>{title}</h1>{children && <p className="page-lede">{children}</p>}</div></section>; }
 
 function Projects() {
-  return <><PageIntro title={<>Projects</>} ></PageIntro><section className="project-list section-pad">{projects.map((project) => <article className="project-card" key={project.number}><div className="project-heading"><div><span className="card-tag">{project.tag}</span><h2>{project.title}</h2></div></div><div className="project-details"><Detail label="Description" text={project.description} /><Detail label="My role" text={project.role} /><Detail label="Skills gained" text={project.skills} /><div className="detail"><span>Resources used</span><p>{project.resourceLink && <><a href={project.resourceLink.url} target="_blank" rel="noreferrer">{project.resourceLink.label}</a>, </>}{project.resources}</p></div></div></article>)}</section></>;
+  return <><PageIntro title={<>Projects</>} ></PageIntro><section className="project-list section-pad">{projects.map((project) => <article className="project-card" key={project.number}><div className="project-heading"><div><span className="card-tag">{project.tag}</span><h2>{project.title}</h2></div></div><div className="project-details"><Detail label="Description" text={project.description} /><Detail label="My role" text={project.role} /><Detail label="Skills gained" text={project.skills} /><Detail label="Resources used" text={project.resources} />{project.demoLink && <div className="detail"><span>Demo</span><p><a className="resource-link" href={project.demoLink.url} target="_blank" rel="noreferrer">{project.demoLink.label}</a></p></div>}</div></article>)}</section></>;
 }
 
 function SeniorDesign() {
@@ -117,11 +117,11 @@ function SeniorDesign() {
         <h2>AI Arcade</h2>
       </div>
       <div className="sd-grid">
-        <Detail label="Description of project" text="AI Arcade builds on a working prototype that lets people describe retro-game changes in natural language. AI modifies game files and validates them, so users can quickly play their ideas on a Raspberry Pi arcade cabinet without needing programming skills. The team will improve the authoring experience through user testing and build a safe, integrated modify-and-play system. Fall work focuses on understanding the prototype, researching users, setting baseline results, and prototyping; spring focuses on safeguards, system integration, further testing, and delivery. The client is SilverTree Studios (contact: Josh Clausman), who provides hardware, hosting, AI expertise, and the cabinet. The team expects to meet in person every two weeks." />
-        <Detail label="Your role · Alex Stoner, Software Engineer and AI-integration Team" text="I develop, test, and integrate the AI component. I focus on user and game testing, creating skills and tools to improve the AI's performance, and researching and implementing security-focused application design." />
+        <Detail label="Description of project" text="AI Arcade builds on a working prototype that lets people describe changes to retro-games changes through natural language. The AI model modifies game files and validates them, so users can quickly play their ideas on a Raspberry Pi arcade cabinet without needing programming experience or technical knowledge. We are improving the authoring experience through user testing and focusing on safely integrating AI for a fun user experience. Our work focuses on understanding the prototype, researching users, setting baseline results, and prototyping. Then we will focus on safeguards, improving the AI through skills and tools, and further testing to deliver a functioning application." />
+        <Detail label="Your role · Software Engineer and AI-integration Team" text="I develop, test, and integrate the AI component. I focus on user and game testing, creating skills and tools to improve the AI's performance, and researching and implementing security-focused application design." />
         <Detail label="Skills or knowledge gained" text="I am learning how to evaluate an AI authoring experience through user and game testing, build skills and tools that help an AI agent perform reliably, integrate AI into an application, and design practical security controls for AI-generated code." />
-        <Detail label="Link supporting documents" text="Final technical documentation and user-testing results are expected project deliverables. Links can be added here when those materials are available." />
-        <Detail label="Big picture contribution" text="AI Arcade aims to remove technical barriers between a player's creative idea and a playable game, while addressing the security, validation, and responsible-use risks of user-created content." />
+        <div className="detail"><span>Supporting Documents</span><p><a className="resource-link" href="/CPRE4910-Portfolio/documents/sdmay27-06_lightning_talk.pptx" download>Lightning Talk ↘</a><br /><a className="resource-link" href="/CPRE4910-Portfolio/documents/sdmay27-06_Design_Document.docx" download>Design Document ↘</a></p></div>
+        <Detail label="Big picture contribution" text="AI Arcade aims to remove technical barriers between a player's idea and a playable game. It enables creativity, while addressing the security, validation, and responsible-use risks of user-created content." />
       </div>
     </section>
   </>;

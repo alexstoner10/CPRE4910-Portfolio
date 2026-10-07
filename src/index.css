@@ -54,6 +54,8 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 500; letter-spacing: -.06
 .project-details, .sd-grid, .experience-sections { display: grid; grid-template-columns: 1fr 1fr; gap: 33px 45px; }
 .detail > span { color: var(--muted); display: block; margin-bottom: 11px; }
 .detail p { margin-bottom: 0; }
+.resource-link { color: var(--accent); font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.resource-link:hover, .resource-link:focus-visible { color: var(--ink); text-decoration-thickness: 2px; }
 .content-panel { padding-top: 72px; padding-bottom: 82px; background: #fbfaf5; }
 .panel-heading { max-width: 580px; margin-bottom: 58px; }
 .resource-row { display: flex; justify-content: space-between; gap: 20px; padding-top: 26px; margin-top: 57px; border-top: 1px solid var(--line); }
